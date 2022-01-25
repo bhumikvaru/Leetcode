@@ -13,7 +13,7 @@ public:
             else
                 count++;
         }
-        return length;
+        return count;
 
     }
 };
