@@ -14,8 +14,12 @@ var deleteDuplicates = function(head) {
     
     while(temp && temp.next)
         {
-            if(temp.val === temp.next.val)
-                temp.next = temp.next.next;
+            let cp = temp.next;
+            if(temp.val === cp.val)
+                {
+                temp.next = cp.next;
+                    delete cp;
+                }
             else
                 temp = temp.next;
         }
